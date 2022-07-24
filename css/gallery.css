@@ -1,0 +1,51 @@
+/* ---------- GALLERY ---------- */
+
+.gallery {
+    padding: 28px 28px;
+    background-color: #ffffff;
+}
+
+.masonry {
+    column-gap: 28px;
+    column-count: 3;
+}
+
+.masonry .mItem {
+    transition: 0.3s linear;
+    transform: scale(100.1%);
+    margin-bottom: 28px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.masonry .mItem img {
+    transition: 0.3s linear;
+    transform: scale(100.1%);
+    filter: brightness(1);
+    vertical-align: middle;
+    width: 100%;
+
+}
+
+/* item hover */
+.masonry .mItem:hover {
+    transform: scale(99.6%);
+}
+
+/* image hover */
+.masonry .mItem img:hover {
+    transform: scale(104%);
+    filter: brightness(1.14);
+}
+
+@media (max-width: 992px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry {
+        column-count: 1;
+    }
+}

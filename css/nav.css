@@ -1,0 +1,164 @@
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+/* navbar collapse center text */
+.navbar-collapse a.nav-link {
+    text-align: center;
+}
+
+/* logo style */
+.navbar-brand img {
+    height: 44px;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-brand img {
+        height: 34px;
+    }
+}
+
+/* ---------- FONTS ---------- */
+
+/* navbar brand font */
+.navbar-brand {
+    font-family: ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* navbar font */
+.navbar {
+    font-family: open-sans;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 22px;
+    }
+}
+
+/* ---------- COLORS ---------- */
+
+/* navbar background color */
+.navbar {
+    background-color: #3c352bb4;
+}
+
+/* navbar brand color */
+.navbar-brand {
+    color: #EBE0DA;
+}
+
+.navbar-brand:hover {
+    color: #EBE0DA;
+}
+
+/* navbar text color */
+.nav-link,
+.navbar .nav-link.active {
+    color: #EBE0DA;
+}
+
+.nav-link:hover {
+    color: #EBE0DA;
+}
+
+/* ---------- TOGGLER ---------- */
+
+/* remove shadow for navbar-toggler Hamburger icon*/
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none;
+}
+
+/* ---------- ROTATE TOGGLER ---------- */
+
+.rotate-toggler .navbar-toggler {
+    transition: all 0.4s;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    padding: 10px 0;
+}
+
+.rotate-toggler .navbar-toggler span {
+    background-color: #EBE0DA;
+    transition: all 0.4s;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 3px;
+}
+
+.rotate-toggler .navbar-toggler span::before,
+.rotate-toggler .navbar-toggler span::after {
+    background-color: #EBE0DA;
+    transition: all 0.4s;
+    border-radius: 2px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: -10px;
+    left: 0;
+}
+
+.rotate-toggler .navbar-toggler span::after {
+    top: 10px;
+}
+
+.rotate-toggler .navbar-toggler[aria-expanded="true"] {
+    transform: rotate(360deg);
+}
+
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span {
+    transform: rotate(45deg);
+}
+
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span::before,
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+/* ---------- HOVER UNDERLINE ANIMATION ---------- */
+
+.hover-underline-animation {
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    background-color: #EBE0DA;
+    transition: all 0.1s linear;
+    position: absolute;
+    margin: auto;
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.hover-underline-animation:hover:after {
+    transition: all 0.4s;
+    width: 90%;
+}
+
+@media screen and (max-width: 992px) {
+    .hover-underline-animation:hover:after {
+        width: 0%;
+    }
+}
