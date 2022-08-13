@@ -26,6 +26,21 @@
     }
 }
 
+/* for low resolution displays */
+@media screen and (max-width: 326px) {
+    .navbar-brand {
+        padding-bottom: 12px;
+    }
+
+    .navbar-brand span {
+        font-size: 16px;
+    }
+
+    .navbar-brand img {
+        display: none;
+    }
+}
+
 /* ---------- FONTS ---------- */
 
 /* navbar brand font */

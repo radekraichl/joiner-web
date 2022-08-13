@@ -20,3 +20,20 @@
     opacity: 1;
 }
 
+/* first fade after loading the page */
+.first-fade {
+    animation: first-fade 1.5s;
+    -webkit-animation: first-fade 1.5s;
+}
+
+@keyframes first-fade {
+    0%   {
+        filter: opacity(0);
+        -webkit-filter: opacity(0);
+    }
+
+    100% {
+        filter: opacity(1);
+        -webkit-filter: opacity(1);
+    }
+}
