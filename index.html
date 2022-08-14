@@ -59,13 +59,24 @@
 
     <!-- Hero Section -->
     <header>
-        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
+        <!-- <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
             <div class="carousel-inner">
                 <div class="hero-first-img carousel-item hero-item" data-bs-interval="4000" data-jarallax data-speed="0.4">
                     <img src="img/hero/1-1.jpg" class="d-block jarallax-img" alt="">
                 </div>
                 <div class="carousel-item hero-item" data-bs-interval="4000" data-jarallax data-speed="0.4">
                     <img src="img/hero/1-2.jpg" class="d-block jarallax-img" alt="">
+                </div>
+            </div>
+        </div> -->
+
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div id="hero-first-img" class="carousel-item hero-item" data-bs-interval="6000" data-jarallax data-speed="0.4">
+                    <img src="img/hero/1-1.jpg" class="d-block jarallax-img" alt="intro image">
+                </div>
+                <div class="carousel-item hero-item" data-bs-interval="6000" data-jarallax data-speed="0.4">
+                    <img src="img/hero/1-2.jpg" class="d-block jarallax-img" alt="intro image">
                 </div>
             </div>
         </div>
@@ -145,11 +156,11 @@
 
     </footer>
 
-    <!-- jarallax -->
-    <script src="jarallax/jarallax.min.js"></script>
-
     <!-- bootstrap -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- jarallax -->
+    <script src="jarallax/jarallax.min.js"></script>
 
     <!-- lightgallery -->
     <script src="light-gallery/lightgallery.min.js"></script>
@@ -177,10 +188,94 @@
         });
     </script>
 
-    <!-- fix flickering intro image -->
     <script type="text/javascript">
-        const heroFirstImg = document.getElementsByClassName('hero-first-img');
-        heroFirstImg[0].className += ' active';
+        
+        // fix flickering intro image
+        const heroFirstImg = document.getElementById('hero-first-img');
+        heroFirstImg.className += ' active';
+
+
+
+
+        function createCSSSelector(selector, style) {
+            if (!document.styleSheets) return;
+            if (document.getElementsByTagName('head').length == 0) return;
+
+            var styleSheet, mediaType;
+
+            if (document.styleSheets.length > 0) {
+                for (var i = 0, l = document.styleSheets.length; i < l; i++) {
+                    if (document.styleSheets[i].disabled)
+                        continue;
+                    var media = document.styleSheets[i].media;
+                    mediaType = typeof media;
+
+                    if (mediaType === 'string') {
+                        if (media === '' || (media.indexOf('screen') !== -1)) {
+                            styleSheet = document.styleSheets[i];
+                        }
+                    }
+                    else if (mediaType == 'object') {
+                        if (media.mediaText === '' || (media.mediaText.indexOf('screen') !== -1)) {
+                            styleSheet = document.styleSheets[i];
+                        }
+                    }
+
+                    if (typeof styleSheet !== 'undefined')
+                        break;
+                }
+            }
+
+            if (typeof styleSheet === 'undefined') {
+                var styleSheetElement = document.createElement('style');
+                styleSheetElement.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(styleSheetElement);
+
+                for (i = 0; i < document.styleSheets.length; i++) {
+                    if (document.styleSheets[i].disabled) {
+                        continue;
+                    }
+                    styleSheet = document.styleSheets[i];
+                }
+
+                mediaType = typeof styleSheet.media;
+            }
+
+            if (mediaType === 'string') {
+                for (var i = 0, l = styleSheet.rules.length; i < l; i++) {
+                    if (styleSheet.rules[i].selectorText && styleSheet.rules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
+                        styleSheet.rules[i].style.cssText = style;
+                        return;
+                    }
+                }
+                styleSheet.addRule(selector, style);
+            }
+            else if (mediaType === 'object') {
+                var styleSheetLength = (styleSheet.cssRules) ? styleSheet.cssRules.length : 0;
+                for (var i = 0; i < styleSheetLength; i++) {
+                    if (styleSheet.cssRules[i].selectorText && styleSheet.cssRules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
+                        styleSheet.cssRules[i].style.cssText = style;
+                        return;
+                    }
+                }
+                styleSheet.insertRule(selector + '{' + style + '}', styleSheetLength);
+            }
+        }
+
+        function setFadeTime(time) {
+            createCSSSelector
+                ('.carousel-item', `transition: transform ${time}s ease-in-out`);
+            createCSSSelector
+                ('.carousel-fade .active.carousel-item-start', `transition: opacity 0s ${time}s`);
+            createCSSSelector
+                ('.carousel-fade .active.carousel-item-end', `transition: opacity 0s ${time}s`);
+        }
+
+        setFadeTime(0.6);
+
+        setTimeout(function() { setFadeTime(3, 1) }, 1);
+
+
     </script>
 </body>
 
