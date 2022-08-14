@@ -1,3 +1,14 @@
+// this will set the fade time for the hero carousel images
+function setHeroCarouselFadeTime(time) {
+    createCSSSelector
+        ('.carousel-item', `transition: transform ${time}s ease-in-out`);
+    createCSSSelector
+        ('.carousel-fade .active.carousel-item-start', `transition: opacity 0s ${time}s`);
+    createCSSSelector
+        ('.carousel-fade .active.carousel-item-end', `transition: opacity 0s ${time}s`);
+}
+
+// this will create a new css rule
 function createCSSSelector(selector, style) {
     if (!document.styleSheets) return;
     if (document.getElementsByTagName('head').length == 0) return;
@@ -60,14 +71,4 @@ function createCSSSelector(selector, style) {
         }
         styleSheet.insertRule(selector + '{' + style + '}', styleSheetLength);
     }
-}
-
-// this will set the fade time for the hero carousel images
-function setHeroCarouselFadeTime(time) {
-    createCSSSelector
-        ('.carousel-item', `transition: transform ${time}s ease-in-out`);
-    createCSSSelector
-        ('.carousel-fade .active.carousel-item-start', `transition: opacity 0s ${time}s`);
-    createCSSSelector
-        ('.carousel-fade .active.carousel-item-end', `transition: opacity 0s ${time}s`);
 }
