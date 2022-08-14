@@ -29,7 +29,6 @@ function createCSSSelector(selector, style) {
 
     if (typeof styleSheet === 'undefined') {
         var styleSheetElement = document.createElement('style');
-        styleSheetElement.type = 'text/css';
         document.getElementsByTagName('head')[0].appendChild(styleSheetElement);
 
         for (i = 0; i < document.styleSheets.length; i++) {
@@ -43,13 +42,13 @@ function createCSSSelector(selector, style) {
     }
 
     if (mediaType === 'string') {
-        for (var i = 0, l = styleSheet.rules.length; i < l; i++) {
-            if (styleSheet.rules[i].selectorText && styleSheet.rules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
-                styleSheet.rules[i].style.cssText = style;
+        for (var i = 0, l = styleSheet.cssRules.length; i < l; i++) {
+            if (styleSheet.cssRules[i].selectorText && styleSheet.rules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
+                styleSheet.cssRules[i].style.cssText = style;
                 return;
             }
         }
-        styleSheet.addRule(selector, style);
+        styleSheet.insertRule(selector, style);
     }
     else if (mediaType === 'object') {
         var styleSheetLength = (styleSheet.cssRules) ? styleSheet.cssRules.length : 0;
