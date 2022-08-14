@@ -59,17 +59,6 @@
 
     <!-- Hero Section -->
     <header>
-        <!-- <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
-            <div class="carousel-inner">
-                <div class="hero-first-img carousel-item hero-item" data-bs-interval="4000" data-jarallax data-speed="0.4">
-                    <img src="img/hero/1-1.jpg" class="d-block jarallax-img" alt="">
-                </div>
-                <div class="carousel-item hero-item" data-bs-interval="4000" data-jarallax data-speed="0.4">
-                    <img src="img/hero/1-2.jpg" class="d-block jarallax-img" alt="">
-                </div>
-            </div>
-        </div> -->
-
         <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
             <div class="carousel-inner">
                 <div id="hero-first-img" class="carousel-item hero-item" data-bs-interval="6000" data-jarallax data-speed="0.4">
@@ -193,9 +182,6 @@
         // fix flickering intro image
         const heroFirstImg = document.getElementById('hero-first-img');
         heroFirstImg.className += ' active';
-
-
-
 
         function createCSSSelector(selector, style) {
             if (!document.styleSheets) return;
