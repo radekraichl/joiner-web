@@ -2,7 +2,6 @@
     height: 100vh;
 }
 
-
 /* Fix for flickering carousel */
 .carousel-inner .carousel-item {
     opacity: 0;
