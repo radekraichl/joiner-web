@@ -58,7 +58,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header>
+    <!-- <header>
         <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
             <div class="carousel-inner">
                 <div id="hero-first-img" class="carousel-item hero-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
@@ -78,7 +78,24 @@
                 </div>
             </div>
         </div>
+    </header> -->
+
+    <header>
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div id="hero-first-img" class="carousel-item hero-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
+                    <img src="img/hero/1sm.jpg" class="d-block jarallax-img" alt="intro image">
+                </div>
+                <div class="carousel-item hero-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
+                    <img src="img/hero/2sm.jpg" class="d-block jarallax-img" alt="intro image">
+                </div>
+                <div class="carousel-item hero-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
+                    <img src="img/hero/3sm.jpg" class="d-block jarallax-img" alt="intro image">
+                </div>
+            </div>
+        </div>
     </header>
+
 
     <main>
         <div class="container mt-5">
@@ -171,8 +188,8 @@
     <script src="light-gallery/plugins/zoom/lg-zoom.min.js"></script>
     <script src="light-gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
 
-    <!-- lightgallery init -->
     <script type="text/javascript">
+        // lightgallery init
         lightGallery(document.getElementById('light-gallery'), {
             plugins: [lgThumbnail, lgFullscreen, lgZoom],
             licenseKey: 'your_license_key',
@@ -187,9 +204,7 @@
             zoom: true,
             scale: 1
         });
-    </script>
 
-    <script type="text/javascript">
         // fix flickering intro image
         const heroFirstImg = document.getElementById('hero-first-img');
         heroFirstImg.className += ' active';
