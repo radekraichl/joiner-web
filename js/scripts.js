@@ -54,7 +54,7 @@ function createCSSSelector(selector, style) {
 
     if (mediaType === 'string') {
         for (var i = 0, l = styleSheet.cssRules.length; i < l; i++) {
-            if (styleSheet.cssRules[i].selectorText && styleSheet.rules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
+            if (styleSheet.cssRules[i].selectorText && styleSheet.cssRules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
                 styleSheet.cssRules[i].style.cssText = style;
                 return;
             }
