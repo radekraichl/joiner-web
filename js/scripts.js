@@ -62,7 +62,7 @@ function createCSSSelector(selector, style) {
         styleSheet.insertRule(selector, style);
     }
     else if (mediaType === 'object') {
-        var styleSheetLength = (styleSheet.cssRules) ? styleSheet.cssRules.length : 0;
+        var styleSheetLength = styleSheet.cssRules ? styleSheet.cssRules.length : 0;
         for (var i = 0; i < styleSheetLength; i++) {
             if (styleSheet.cssRules[i].selectorText && styleSheet.cssRules[i].selectorText.toLowerCase() == selector.toLowerCase()) {
                 styleSheet.cssRules[i].style.cssText = style;
