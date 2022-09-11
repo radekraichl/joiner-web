@@ -1,3 +1,45 @@
+/* ---------- FONTS ---------- */
+
+/* navbar brand font */
+.navbar-brand {
+    font-family: ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* navbar font */
+.navbar {
+    font-family: open-sans;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* ---------- COLORS ---------- */
+
+/* navbar background color */
+.navbar {
+    background-color: #3c352bb4;
+}
+
+/* navbar brand color */
+.navbar-brand {
+    color: #F0F0F0;
+}
+
+.navbar-brand:hover {
+    color: #F0F0F0;
+}
+
+/* navbar text color */
+.nav-link,
+.navbar .nav-link.active {
+    color: #F0F0F0;
+}
+
+.nav-link:hover {
+    color: #F0F0F0;
+}
+
 /* ---------- NAVBAR ---------- */
 
 .navbar {
@@ -24,6 +66,10 @@
     .navbar-brand img {
         height: 34px;
     }
+
+    .navbar-brand {
+        font-size: 22px;
+    }
 }
 
 /* for low resolution displays */
@@ -39,54 +85,6 @@
     .navbar-brand img {
         display: none;
     }
-}
-
-/* ---------- FONTS ---------- */
-
-/* navbar brand font */
-.navbar-brand {
-    font-family: ubuntu;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-/* navbar font */
-.navbar {
-    font-family: open-sans;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-@media screen and (max-width: 576px) {
-    .navbar-brand {
-        font-size: 22px;
-    }
-}
-
-/* ---------- COLORS ---------- */
-
-/* navbar background color */
-.navbar {
-    background-color: #3c352bb4;
-}
-
-/* navbar brand color */
-.navbar-brand {
-    color: #EBE0DA;
-}
-
-.navbar-brand:hover {
-    color: #EBE0DA;
-}
-
-/* navbar text color */
-.nav-link,
-.navbar .nav-link.active {
-    color: #EBE0DA;
-}
-
-.nav-link:hover {
-    color: #EBE0DA;
 }
 
 /* ---------- TOGGLER ---------- */

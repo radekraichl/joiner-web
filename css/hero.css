@@ -1,6 +1,31 @@
-.hero-item {
+/* ---------- HERO SECTION ---------- */
+
+.carousel-item {
     height: 100vh;
 }
+
+/* ---------- HERO HEADLINE ---------- */
+
+.hero-headline {
+    color: #F0F0F0;
+    position: absolute;
+    top: 40%;
+}
+
+/* carousel headline font */
+.hero-headline h1 {
+    font-family: open-sans;
+    font-size: 46px;
+    font-weight: 800;
+}
+
+.hero-headline h2 {
+    font-family: open-sans;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* ---------- OTHER ---------- */
 
 /* Fix for flickering carousel */
 .carousel-inner .carousel-item {
