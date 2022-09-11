@@ -4,25 +4,45 @@
     height: 100vh;
 }
 
+.carousel-item img {
+    filter: brightness(0.8);
+}
+
+.slider_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 /* ---------- Hero headline ---------- */
 
 .hero-headline {
+    font-family: open-sans;
     color: #F0F0F0;
-    position: absolute;
-    top: 40%;
+    position: relative;
+    top: 40vh;
 }
 
-/* carousel headline font */
+/* carousel headline fonts */
 .hero-headline h1 {
-    font-family: open-sans;
-    font-size: 46px;
+    font-size: 44px;
     font-weight: 800;
 }
 
 .hero-headline h2 {
-    font-family: open-sans;
     font-size: 28px;
     font-weight: 800;
+    margin: 18px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-headline h1 {
+        font-size: 34px;
+    }
+
+    .hero-headline h2 {
+        font-size: 20px;
+    }
 }
 
 /* ---------- Other ---------- */
