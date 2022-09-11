@@ -1,4 +1,5 @@
-/* fonts */
+/* ---------- Adding fonts ---------- */
+
 @font-face {
     font-family: open-sans;
     src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');

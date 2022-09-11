@@ -1,4 +1,4 @@
-/* ---------- FONTS ---------- */
+/* ---------- Fonts ---------- */
 
 /* navbar brand font */
 .navbar-brand {
@@ -14,7 +14,7 @@
     font-weight: 400;
 }
 
-/* ---------- COLORS ---------- */
+/* ---------- Colors ---------- */
 
 /* navbar background color */
 .navbar {
@@ -40,7 +40,7 @@
     color: #F0F0F0;
 }
 
-/* ---------- NAVBAR ---------- */
+/* ---------- Navbar ---------- */
 
 .navbar {
     position: absolute;
@@ -87,7 +87,7 @@
     }
 }
 
-/* ---------- TOGGLER ---------- */
+/* ---------- Toggler ---------- */
 
 /* remove shadow for navbar-toggler Hamburger icon*/
 .navbar-toggler:focus,
@@ -95,7 +95,7 @@
     box-shadow: none;
 }
 
-/* ---------- ROTATE TOGGLER ---------- */
+/* ---------- Rotate toggler ---------- */
 
 .rotate-toggler .navbar-toggler {
     transition: all 0.4s;
@@ -146,7 +146,7 @@
     top: 0;
 }
 
-/* ---------- HOVER UNDERLINE ANIMATION ---------- */
+/* ---------- Hover underline animation ---------- */
 
 .hover-underline-animation {
     position: relative;
