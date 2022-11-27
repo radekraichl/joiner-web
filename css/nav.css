@@ -68,11 +68,20 @@
     }
 
     .navbar-brand {
-        font-size: 22px;
+        font-size: 28px;
     }
 }
 
-/* for low resolution displays */
+@media screen and (max-width: 576px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+}
+
 @media screen and (max-width: 326px) {
     .navbar-brand {
         padding-bottom: 12px;
@@ -89,61 +98,71 @@
 
 /* ---------- Toggler ---------- */
 
-/* remove shadow for navbar-toggler Hamburger icon*/
+/* remove shadow for navbar-toggler Hamburger icon */
 .navbar-toggler:focus,
 .navbar-toggler:active {
     box-shadow: none;
 }
 
-/* ---------- Rotate toggler ---------- */
-
-.rotate-toggler .navbar-toggler {
-    transition: all 0.4s;
+.navbar-toggler {
     border: none;
-    border-radius: 0;
+    margin: 0;
     padding: 0;
-    padding: 10px 0;
 }
 
-.rotate-toggler .navbar-toggler span {
-    background-color: #EBE0DA;
-    transition: all 0.4s;
-    border-radius: 2px;
-    position: relative;
-    display: block;
-    width: 32px;
-    height: 3px;
+.ham {
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 4rem;
 }
 
-.rotate-toggler .navbar-toggler span::before,
-.rotate-toggler .navbar-toggler span::after {
-    background-color: #EBE0DA;
-    transition: all 0.4s;
-    border-radius: 2px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: "";
-    top: -10px;
-    left: 0;
-}
-
-.rotate-toggler .navbar-toggler span::after {
-    top: 10px;
-}
-
-.rotate-toggler .navbar-toggler[aria-expanded="true"] {
-    transform: rotate(360deg);
-}
-
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span {
+.hamRotate.active {
     transform: rotate(45deg);
 }
 
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span::before,
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span::after {
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #F0F0F0;
+    stroke-width: 4.2;
+    stroke-linecap: round;
+}
+
+.ham .top {
+    stroke-dasharray: 40 160;
+}
+
+.ham .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+
+.ham .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham.active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham.active .middle {
     transform: rotate(90deg);
-    top: 0;
+}
+
+.ham.active .bottom {
+    stroke-dashoffset: -64px;
 }
 
 /* ---------- Hover underline animation ---------- */
