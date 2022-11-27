@@ -102,7 +102,7 @@
                             <h1>Výtejete na mých stránkách</h1>
                             <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
                         </div>
-                    <div class="scroll-indicator "></div>
+                        <div class="scroll-indicator "></div>
                     </div>
                 </div>
 
@@ -171,9 +171,6 @@
 
     </footer>
 
-    <!-- scripts -->
-    <script src="js/scripts.js"></script>
-
     <!-- bootstrap -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -188,31 +185,8 @@
     <script src="light-gallery/plugins/zoom/lg-zoom.min.js"></script>
     <script src="light-gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
 
-    <script type="text/javascript">
-        // lightgallery init
-        lightGallery(document.getElementById('light-gallery'), {
-            plugins: [lgThumbnail, lgFullscreen, lgZoom],
-            licenseKey: 'your_license_key',
-            getCaptionFromTitleOrAlt: false,
-            startAnimationDuration: 300,
-            hideBarsDelay: 5000,
-            actualSize: true,
-            fullScreen: true,
-            counter: false,
-            mode: 'lg-tube',
-            speed: 500,
-            zoom: true,
-            scale: 1
-        });
-
-        // fix flickering intro image
-        const heroFirstImage = document.getElementById('hero-first-img');
-        heroFirstImage.className += ' active';
-
-        // set fade for hero carousel images
-        setHeroCarouselFadeTime(0.4);                                    // first fade
-        setTimeout(function () { setHeroCarouselFadeTime(2.4) }, 1);     // all the others (after the set time)
-    </script>
+    <!-- scripts -->
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
