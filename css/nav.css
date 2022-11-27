@@ -74,11 +74,11 @@
 
 @media screen and (max-width: 576px) {
     .navbar-brand img {
-        height: 30px;
+        height: 28px;
     }
 
     .navbar-brand {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
