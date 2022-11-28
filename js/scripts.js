@@ -15,12 +15,12 @@ lightGallery(document.getElementById('light-gallery'), {
 });
 
 // Set fade time
-$(document).ready(function ()
-{
-    $("<style> .carousel-item { transition: opacity 3s ease-in-out } </style>").appendTo("head")
-    $("<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>").appendTo("head")
-    $("<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>").appendTo("head")
-});
+// $(document).ready(function ()
+// {
+//     $("<style> .carousel-item { transition: opacity 3s ease-in-out } </style>").appendTo("head")
+//     $("<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>").appendTo("head")
+//     $("<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>").appendTo("head")
+// });
 
 // Fix flickering intro image
 const heroFirstImage = document.getElementById('hero-first-img');
