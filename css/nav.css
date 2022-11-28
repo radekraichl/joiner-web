@@ -48,121 +48,98 @@
     z-index: 100;
 }
 
-.navbar-brand {
-    margin: 0;
-}
-
 /* navbar collapse center text */
 .navbar-collapse a.nav-link {
     text-align: center;
 }
 
-/* logo style */
+/* logo size */
 .navbar-brand img {
     height: 44px;
 }
 
-@media screen and (max-width: 768px) {
-    .navbar-brand img {
-        height: 34px;
-    }
-
-    .navbar-brand {
-        font-size: 28px;
-    }
-}
-
 @media screen and (max-width: 576px) {
     .navbar-brand img {
-        height: 28px;
+        height: 30px;
     }
 
     .navbar-brand {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
+/* for low resolution displays */
 @media screen and (max-width: 326px) {
     .navbar-brand {
-        padding-bottom: 12px;
+        padding-bottom: 8px;
     }
 
-    .navbar-brand span {
+    .navbar-brand {
         font-size: 16px;
     }
 
     .navbar-brand img {
-        display: none;
+        height: 20px;
     }
 }
 
 /* ---------- Toggler ---------- */
 
-/* remove shadow for navbar-toggler Hamburger icon */
+/* remove shadow for navbar-toggler Hamburger icon*/
 .navbar-toggler:focus,
 .navbar-toggler:active {
     box-shadow: none;
 }
 
-.navbar-toggler {
+/* ---------- Rotate toggler ---------- */
+
+.rotate-toggler .navbar-toggler {
+    transition: all 0.4s;
     border: none;
-    margin: 0;
+    border-radius: 0;
     padding: 0;
+    padding: 10px 0;
 }
 
-.ham {
-    border: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 4rem;
+.rotate-toggler .navbar-toggler span {
+    background-color: #EBE0DA;
+    transition: all 0.4s;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 3px;
 }
 
-.hamRotate.active {
+.rotate-toggler .navbar-toggler span::before,
+.rotate-toggler .navbar-toggler span::after {
+    background-color: #EBE0DA;
+    transition: all 0.4s;
+    border-radius: 2px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: -10px;
+    left: 0;
+}
+
+.rotate-toggler .navbar-toggler span::after {
+    top: 10px;
+}
+
+.rotate-toggler .navbar-toggler[aria-expanded="true"] {
+    transform: rotate(360deg);
+}
+
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span {
     transform: rotate(45deg);
 }
 
-.hamRotate180.active {
-    transform: rotate(180deg);
-}
-
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #F0F0F0;
-    stroke-width: 4.2;
-    stroke-linecap: round;
-}
-
-.ham .top {
-    stroke-dasharray: 40 160;
-}
-
-.ham .middle {
-    stroke-dasharray: 40 142;
-    transform-origin: 50%;
-    transition: transform 400ms;
-}
-
-.ham .bottom {
-    stroke-dasharray: 40 85;
-    transform-origin: 50%;
-    transition: transform 400ms, stroke-dashoffset 400ms;
-}
-
-.ham.active .top {
-    stroke-dashoffset: -64px;
-}
-
-.ham.active .middle {
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span::before,
+.rotate-toggler .navbar-toggler[aria-expanded="true"] span::after {
     transform: rotate(90deg);
-}
-
-.ham.active .bottom {
-    stroke-dashoffset: -64px;
+    top: 0;
 }
 
 /* ---------- Hover underline animation ---------- */
