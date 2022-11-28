@@ -71,7 +71,7 @@
 /* for low resolution displays */
 @media screen and (max-width: 326px) {
     .navbar-brand {
-        padding-bottom: 8px;
+        margin-bottom: 5px;
     }
 
     .navbar-brand {
