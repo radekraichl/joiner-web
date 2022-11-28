@@ -93,7 +93,7 @@
 
 /* ---------- Rotate toggler ---------- */
 
-.rotate-toggler .navbar-toggler {
+.navbar-toggler {
     transition: all 0.4s;
     border: none;
     border-radius: 0;
@@ -101,7 +101,7 @@
     padding: 10px 0;
 }
 
-.rotate-toggler .navbar-toggler span {
+.navbar-toggler span {
     background-color: #EBE0DA;
     transition: all 0.4s;
     border-radius: 2px;
@@ -111,8 +111,8 @@
     height: 3px;
 }
 
-.rotate-toggler .navbar-toggler span::before,
-.rotate-toggler .navbar-toggler span::after {
+.navbar-toggler span::before,
+.navbar-toggler span::after {
     background-color: #EBE0DA;
     transition: all 0.4s;
     border-radius: 2px;
@@ -124,20 +124,20 @@
     left: 0;
 }
 
-.rotate-toggler .navbar-toggler span::after {
+.navbar-toggler span::after {
     top: 10px;
 }
 
-.rotate-toggler .navbar-toggler[aria-expanded="true"] {
+.navbar-toggler[aria-expanded="true"] {
     transform: rotate(360deg);
 }
 
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span {
+.navbar-toggler[aria-expanded="true"] span {
     transform: rotate(45deg);
 }
 
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span::before,
-.rotate-toggler .navbar-toggler[aria-expanded="true"] span::after {
+.navbar-toggler[aria-expanded="true"] span::before,
+.navbar-toggler[aria-expanded="true"] span::after {
     transform: rotate(90deg);
     top: 0;
 }
