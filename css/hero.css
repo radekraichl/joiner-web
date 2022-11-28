@@ -27,14 +27,14 @@
 
 /* ---------- Init fade time ---------- */
 
-/* .carousel-item {
+.carousel-item {
     transition: opacity 0.4s ease-in-out;
 }
 
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
     transition: opacity 0s 0.4s
-} */
+}
 
 /* ---------- Hero headline ---------- */
 
