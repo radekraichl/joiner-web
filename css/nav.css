@@ -91,8 +91,6 @@
     box-shadow: none;
 }
 
-/* ---------- Rotate toggler ---------- */
-
 .navbar-toggler {
     transition: all 0.4s;
     border: none;
@@ -101,10 +99,15 @@
     padding: 10px 0;
 }
 
-.navbar-toggler span {
+.navbar-toggler span,
+.navbar-toggler span::before,
+.navbar-toggler span::after {
     background-color: #EBE0DA;
     transition: all 0.4s;
     border-radius: 2px;
+}
+
+.navbar-toggler span {
     position: relative;
     display: block;
     width: 32px;
@@ -113,9 +116,6 @@
 
 .navbar-toggler span::before,
 .navbar-toggler span::after {
-    background-color: #EBE0DA;
-    transition: all 0.4s;
-    border-radius: 2px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -129,7 +129,7 @@
 }
 
 .navbar-toggler[aria-expanded="true"] {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
 }
 
 .navbar-toggler[aria-expanded="true"] span {
