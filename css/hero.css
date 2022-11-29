@@ -25,20 +25,6 @@
     z-index: -1;
 }
 
-/* ---------- Parallax ---------- */
-
-.hero-img-1 {
-    background: url(../img/hero/1.jpg) 50% 0;
-}
-
-
-.hero-parallax {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
 /* ---------- Init fade time ---------- */
 
 .carousel-item {
