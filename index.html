@@ -33,7 +33,53 @@
 
 
     <style>
+        .paralex {
+            position: relative;
+            height: auto;
+            z-index: 1;
+            border-radius: 0.0001px;
+            clip-path: inset(0 0 0 0);
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
 
+        .paralex .background {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            transform: translateZ(0);
+            -moz-transform: translatez(0);
+            -ms-transform: translatez(0);
+            -o-transform: translatez(0);
+            -webkit-transform: translateZ(0);
+            -webkit-font-smoothing: antialiased;
+            /* seems to do the same in Safari Family of Browsers*/
+        }
+
+        .paralex.fixed .background {
+            position: fixed;
+        }
+
+        .paralex .foreground {
+            display: block;
+            overflow: auto;
+        }
+
+        .not-paralex {
+            background: #00aeee;
+            foreground: "";
+            height: 500px;
+        }
     </style>
 
 </head>
@@ -63,75 +109,25 @@
 
     <!-- Hero Section -->
     <header>
+
         <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
             <div class="carousel-inner">
 
-                <div id="hero-first-img" class="carousel-item" data-bs-interval="5000">
-
-                    <section class="hero-parallax hero-img-1" data-speed="4" data-type="background"></section>
-
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
+                <div id="hero-first-img" class="carousel-item" data-bs-interval="1000" data-jarallax data-speed="0.4">
+                    <div class="paralex reverse full">
+                        <div class="background" style="background: url(img/hero/1.jpg); background-position-x: center;"></div>
+                        <div class="foreground">parlex</div>
                     </div>
-                    <div class="scroll-indicator "></div>
-
                 </div>
 
-                <!-- <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
-                    <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/2.jpg" alt="">
+                <div class="carousel-item" data-bs-interval="1000" data-jarallax data-speed="0.4">
+                    <div class="paralex reverse full">
+                        <div class="background" style="background: url(img/hero/2.jpg); background-position-x: center;"></div>
+                        <div class="foreground">parlex</div>
                     </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
-                    </div>
-                    <div class="scroll-indicator "></div>
                 </div>
-
-                <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
-                    <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/3.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
-                    </div>
-                    <div class="scroll-indicator "></div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
-                    <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/4.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
-                    </div>
-                    <div class="scroll-indicator "></div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
-                    <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/5.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
-                    </div>
-                    <div class="scroll-indicator "></div>
-                </div> -->
             </div>
+        </div>
         </div>
     </header>
 
@@ -192,10 +188,6 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <!-- jarallax -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script> -->
-    <!-- <script src="jarallax/jarallax.min.js"></script> -->
-
     <!-- lightgallery -->
     <script src="light-gallery/lightgallery.min.js"></script>
 
@@ -206,17 +198,40 @@
 
     <!-- scripts -->
     <script src="js/scripts.js"></script>
-    <script src="js/parallax.js"></script>
 
+    <script src="js/paralex.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+        (function ()
+        {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
     <script>
-        var images = document.querySelectorAll('.parallax');
-        new simpleParallax(images, {
-            orientation: 'down',
-            scale: 1.1,
-        });
-    </script> -->
+        try
+        {
+            fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response)
+            {
+                return true;
+            }).catch(function (e)
+            {
+                var carbonScript = document.createElement("script");
+                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+                carbonScript.id = "_carbonads_js";
+                document.getElementById("carbon-block").appendChild(carbonScript);
+            });
+        } catch (error)
+        {
+            console.log(error);
+        }
+    </script>
+
 </body>
 
 </html>
