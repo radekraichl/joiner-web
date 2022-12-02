@@ -13,16 +13,15 @@
     <!-- meta open graph -->
     <!-- https://www.vzhurudolu.cz/prirucka/meta-open-graph -->
 
-    <!-- Bootstrap CSS -->
+    <!-- ---- CSS ---- -->
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <!-- style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/hero.css">
+    <!-- Jarallax -->
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.css" rel="stylesheet" />
 
-    <!-- lightgallery main css -->
+    <!-- lightgallery main -->
     <link type="text/css" rel="stylesheet" href="light-gallery/css/lightgallery.css">
 
     <!-- lightgallery plugins -->
@@ -30,6 +29,12 @@
     <link type="text/css" rel="stylesheet" href="light-gallery/css/lg-thumbnail.css" />
     <link type="text/css" rel="stylesheet" href="light-gallery/css/lg-fullscreen.css" />
     <link type="text/css" rel="stylesheet" href="light-gallery/css/lg-transitions.css" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/hero.css">
 </head>
 
 <body>
@@ -57,132 +62,113 @@
 
     <!-- Hero Section -->
     <header>
+
         <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="false">
             <div class="carousel-inner">
 
-                <div id="hero-first-img" class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
+                <div id="hero-first-img" class="carousel-item" data-bs-interval="5000">
                     <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/1s.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
+                        <img class="jarallax-img" src="img/hero/1.jpg" alt="" />
+                        <div class="jarallax-table">
+                            <div class="jarallax-table-cell">
+                                <div class="container">
+                                    <h1>Výtejete na mých stránkách</h1>
+                                    <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="scroll-indicator "></div>
                 </div>
 
-                <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
+                <div class="carousel-item" data-bs-interval="5000">
                     <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/2s.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
+                        <img class="jarallax-img" src="img/hero/2.jpg" alt="" />
+                        <div class="jarallax-table">
+                            <div class="jarallax-table-cell">
+                                <div class="container">
+                                    <h1>Výtejete na mých stránkách</h1>
+                                    <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="scroll-indicator "></div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="5000" data-jarallax data-speed="0.4">
-                    <div class="jarallax">
-                        <img class="jarallax-img" src="img/hero/3s.jpg" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="hero-headline">
-                            <h1>Výtejete na mých stránkách</h1>
-                            <h2>Poskytuji truhlářské služby, zabývám se především výrobou nábytku.</h2>
-                        </div>
-                    </div>
-                    <div class="scroll-indicator "></div>
                 </div>
 
             </div>
         </div>
-    </header>
 
-    <main>
-        <div class="gallery">
-            <div class="masonry" id="light-gallery">
+        <main>
+            <div class="gallery">
+                <div class="masonry" id="light-gallery">
 
-                <div class="mItem" data-src="./img/gallery/1.jpg">
-                    <img src="./img/gallery/1.jpg" alt="">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/1.jpg">
+                        <img src="./img/gallery/1.jpg" alt="">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/2.jpg"">
+                    <div class="mItem" data-src="./img/gallery/2.jpg"">
                     <img src=" ./img/gallery/2.jpg">
-                </div>
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/3.jpg">
-                    <img src="./img/gallery/3.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/3.jpg">
+                        <img src="./img/gallery/3.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/4.jpg">
-                    <img src="./img/gallery/4.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/4.jpg">
+                        <img src="./img/gallery/4.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/5.jpg">
-                    <img src="./img/gallery/5.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/5.jpg">
+                        <img src="./img/gallery/5.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/6.jpg">
-                    <img src="./img/gallery/6.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/6.jpg">
+                        <img src="./img/gallery/6.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/7.jpg">
-                    <img src="./img/gallery/7.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/7.jpg">
+                        <img src="./img/gallery/7.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/8.jpg">
-                    <img src="./img/gallery/8.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/8.jpg">
+                        <img src="./img/gallery/8.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/9.jpg">
-                    <img src="./img/gallery/9.jpg">
-                </div>
+                    <div class="mItem" data-src="./img/gallery/9.jpg">
+                        <img src="./img/gallery/9.jpg">
+                    </div>
 
-                <div class="mItem" data-src="./img/gallery/10.jpg">
-                    <img src="./img/gallery/10.jpg" alt="">
+                    <div class="mItem" data-src="./img/gallery/10.jpg">
+                        <img src="./img/gallery/10.jpg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer>
+        <footer>
 
-    </footer>
+        </footer>
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <!-- ---- JS ---- -->
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
-    <!-- jarallax -->
-    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
-    <!-- <script src="jarallax/jarallax.min.js"></script> -->
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <!-- lightgallery -->
-    <script src="light-gallery/lightgallery.min.js"></script>
+        <!-- lightgallery -->
+        <script src="light-gallery/lightgallery.min.js"></script>
 
-    <!-- lightgallery plugins -->
-    <script src="light-gallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="light-gallery/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="light-gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+        <!-- lightgallery plugins -->
+        <script src="light-gallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+        <script src="light-gallery/plugins/zoom/lg-zoom.min.js"></script>
+        <script src="light-gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
 
-    <!-- scripts -->
-    <script src="js/scripts.js"></script>
+        <!-- jarallax -->
+        <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
-    <script>
-        var images = document.querySelectorAll('.parallax');
-        new simpleParallax(images, {
-            orientation: 'down',
-            scale: 1.6,
-        });
-    </script>
+        <!-- scripts -->
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
