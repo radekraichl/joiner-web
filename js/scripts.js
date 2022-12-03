@@ -3,12 +3,8 @@ $(function ()
     // Jarallax init
     $('.jarallax').jarallax({
         speed: 0.01,
-        imgSize: 'cover'
+        enableTransform: false
     });
-
-    var j = $('.jarallax').first();
-
-    console.log(j[0].jarallax.pureOptions);
 
     // Set carousel fade time
     $('<style> .carousel-item { transition: opacity 3s ease-in-out } </style>').appendTo('head');

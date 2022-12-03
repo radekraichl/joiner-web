@@ -56,37 +56,6 @@
     transition: opacity 0s 0.4s
 }
 
-/* ---------- Hero headline ---------- */
-
-.hero-headline {
-    font-family: open-sans;
-    color: #F0F0F0;
-    position: relative;
-    top: 40vh;
-}
-
-/* carousel headline fonts */
-.hero-headline h1 {
-    font-size: 44px;
-    font-weight: 800;
-}
-
-.hero-headline h2 {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 18px 0;
-}
-
-@media screen and (max-width: 768px) {
-    .hero-headline h1 {
-        font-size: 34px;
-    }
-
-    .hero-headline h2 {
-        font-size: 20px;
-    }
-}
-
 /* ---------- Fix for flickering carousel ---------- */
 
 .carousel-inner .carousel-item {
