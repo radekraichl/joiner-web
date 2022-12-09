@@ -72,8 +72,7 @@
     return ($deviceHelper ? $deviceHelper.clientHeight : 0) || global$1.innerHeight || document.documentElement.clientHeight;
   } // Window height data
   
-  console.log(getDeviceHeight());
-
+  
   let wndH;
   
   function updateWndVars()

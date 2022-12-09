@@ -2,8 +2,10 @@ $(function ()
 {
     // Jarallax init
     $('.jarallax').jarallax({
-        speed: 0.01,
-        enableTransform: false
+
+        speed: 0.2,
+        // disableParallax: /iPad|iPhone|iPod|Android/,
+        // disableVideo: /iPad|iPhone|iPod|Android/
     });
 
     // Set carousel fade time
@@ -30,3 +32,21 @@ $(function ()
 
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
+
+// Create --vh property
+
+function createVH()
+{
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+createVH();
+
+window.addEventListener("orientationchange", function() {
+    $(function () {
+        createVH();
+    });
+});

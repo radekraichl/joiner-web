@@ -1,14 +1,11 @@
 /* ---------- Hero Section ---------- */
 
-.carousel-item {
-    height: 100vh;
-}
-
-.carousel-item img {
-    filter: brightness(0.9);
-}
-
 /* ---------- Jarallax ---------- */
+
+.jarallax {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
 
 .jarallax-table {
     display: table;
@@ -17,9 +14,9 @@
 }
 
 .jarallax-table-cell {
+    font-family: open-sans;
     vertical-align: middle;
     display: table-cell;
-    font-family: open-sans;
     color: #F0F0F0;
 }
 
