@@ -50,7 +50,6 @@ else {
     });
 }
 
-
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
 
