@@ -4,8 +4,7 @@ $(function ()
     $('.jarallax').jarallax({
 
         speed: 0.2,
-        // disableParallax: /iPad|iPhone|iPod|Android/,
-        // disableVideo: /iPad|iPhone|iPod|Android/
+        disableParallax: /iPad|iPhone|iPod|Android/,
     });
 
     // Set carousel fade time
@@ -45,8 +44,8 @@ function createVH()
 
 createVH();
 
-window.addEventListener("orientationchange", function() {
-    $(function () {
+$(window).on("orientationchange", () => {
+    $(() => {
         createVH();
     });
 });
