@@ -29,11 +29,7 @@ $(function ()
     });
 });
 
-// Fix flickering intro image
-$('#hero-first-img').addClass('active');
-
 // Create --vh property
-
 function createVH()
 {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -49,3 +45,6 @@ $(window).on("orientationchange", () => {
         createVH();
     });
 });
+
+// Fix flickering intro image
+$('#hero-first-img').addClass('active');
