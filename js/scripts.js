@@ -1,8 +1,6 @@
-$(function ()
-{
+$(function () {
     // Jarallax init
     $('.jarallax').jarallax({
-
         speed: 0.2,
         disableParallax: /iPad|iPhone|iPod|Android/,
     });
@@ -30,8 +28,7 @@ $(function ()
 });
 
 // Create --vh property
-function createVH()
-{
+function createVH() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
@@ -40,11 +37,22 @@ function createVH()
 
 createVH();
 
-$(window).on("orientationchange", () => {
-    $(() => {
+if (isMobile) {
+    $(window).on("orientationchange", () => {
+        $(() => {
+            createVH();
+        });
+    });
+}
+else {
+    $(window).on("resize", () => {
         createVH();
     });
-});
+}
+
 
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
+
+// Mobile device detection
+var isMobile = (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)); 
