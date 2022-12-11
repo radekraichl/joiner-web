@@ -1,3 +1,18 @@
+// Mobile device detection
+var isMobile = (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
+
+// Create --vh property
+function createVH() {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Fix flickering intro image
+$('#hero-first-img').addClass('active');
+
+// Document ready
 $(function () {
     // Jarallax init
     $('.jarallax').jarallax({
@@ -25,33 +40,19 @@ $(function () {
         zoom: true,
         scale: 1,
     });
-});
 
-// Fix flickering intro image
-$('#hero-first-img').addClass('active');
+    createVH();
 
-// Mobile device detection
-var isMobile = (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
-
-// Create --vh property
-function createVH() {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-createVH();
-
-if (isMobile) {
-    $(window).on("orientationchange", () => {
-        $(() => {
+    if (isMobile) {
+        $(window).on("orientationchange", () => {
+            $(() => {
+                createVH();
+            });
+        });
+    }
+    else {
+        $(window).on("resize", () => {
             createVH();
         });
-    });
-}
-else {
-    $(window).on("resize", () => {
-        createVH();
-    });
-}
+    }
+});
