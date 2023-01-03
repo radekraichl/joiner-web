@@ -2,10 +2,6 @@
 
 /* ---------- Jarallax ---------- */
 
-body {
-    overscroll-behavior: none;
-}
-
 .jarallax {
     position: relative;
     z-index: 0;
@@ -73,10 +69,11 @@ body {
 
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
-    transition: opacity 0s 0.4s
+    transition: opacity 0s 0.4s;
 }
 
 /* ---------- Fix for flickering carousel ---------- */
+
 
 .carousel-inner .carousel-item {
     opacity: 0;

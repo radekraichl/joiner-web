@@ -25,3 +25,7 @@
     format('truetype');
     font-weight: 700;
 }
+
+body {
+    overscroll-behavior: none;
+}

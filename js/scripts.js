@@ -1,7 +1,15 @@
-// Mobile device detection
-var isMobile = (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
+var userAgent = navigator.userAgent;
 
-// Create --vh property
+// Mobile device detection
+var isMobile = (/Android|iPhone|iPad|iPod/i.test(userAgent));
+
+// Android version detect
+function getAndroidVersion() {
+    var match = userAgent.toLowerCase().match(/android\s([0-9\.]*)/i);
+    return match ? match[1] : undefined;
+};
+
+// Fuction to create --vh property
 function createVH() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -15,15 +23,11 @@ $('#hero-first-img').addClass('active');
 // Document ready
 $(function () {
     // Jarallax init
-    $('.jarallax').jarallax({
-        speed: 0,
-        //disableParallax: /iPad|iPhone|iPod|Android/,
-    });
-
-    // Set carousel fade time
-    $('<style> .carousel-item { transition: opacity 3s ease-in-out } </style>').appendTo('head');
-    $('<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>').appendTo('head');
-    $('<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>').appendTo('head');
+    if (parseInt(getAndroidVersion()) > 10 || getAndroidVersion() === undefined) {
+        $('.jarallax').jarallax({
+            speed: 0.4,
+        });
+    }
 
     // Lightgallery init
     lightGallery($('#light-gallery').get(0), {
@@ -41,6 +45,12 @@ $(function () {
         scale: 1,
     });
 
+    // Set carousel fade time
+    $('<style> .carousel-item { transition: opacity 3s ease-in-out } </style>').appendTo('head');
+    $('<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>').appendTo('head');
+    $('<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>').appendTo('head');
+
+    // Create --vh property
     createVH();
 
     if (isMobile) {
