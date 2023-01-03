@@ -14,15 +14,13 @@
 
 @font-face {
     font-family: ubuntu;
-    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf') 
-    format('truetype');
+    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
     font-weight: 500;
 }
 
 @font-face {
     font-family: ubuntu;
-    src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf') 
-    format('truetype');
+    src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 

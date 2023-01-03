@@ -44,13 +44,6 @@
     margin: 18px 0;
 }
 
-/* Fix z-index when scrolling is set to 0  */
-.jarallax-table-cell h1,
-.jarallax-table-cell h2 {
-    position: relative;
-    z-index: 1;
-}
-
 @media screen and (max-width: 768px) {
     .jarallax-table-cell h1 {
         font-size: 34px;
@@ -59,6 +52,13 @@
     .jarallax-table-cell h2 {
         font-size: 20px;
     }
+}
+
+/* Fix z-index when scrolling is set to 0  */
+.jarallax-table-cell h1,
+.jarallax-table-cell h2 {
+    position: relative;
+    z-index: 1;
 }
 
 /* ---------- Init fade time ---------- */
@@ -73,7 +73,6 @@
 }
 
 /* ---------- Fix for flickering carousel ---------- */
-
 
 .carousel-inner .carousel-item {
     opacity: 0;
@@ -95,10 +94,11 @@
 /* ---------- Scroll down indicator ---------- */
 
 .scroll-indicator {
+    animation: bounce 1.4s ease infinite;
+    transition: all 0.5s ease-in-out;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: bounce 1.4s ease infinite;
     left: 50%;
     bottom: 3%;
     width: 70px;

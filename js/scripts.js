@@ -65,4 +65,12 @@ $(function () {
             createVH();
         });
     }
+
+    // Fade in adn fade out scroll indicator on scroll 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 10)
+            $('.scroll-indicator').css('opacity', 0);
+        else
+            $('.scroll-indicator').css('opacity', 1);
+    });
 });
