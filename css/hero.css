@@ -2,6 +2,12 @@
 
 /* ---------- Jarallax ---------- */
 
+
+body {
+    overscroll-behavior: none;
+}
+
+
 .jarallax {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);

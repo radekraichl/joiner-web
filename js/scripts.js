@@ -16,8 +16,8 @@ $('#hero-first-img').addClass('active');
 $(function () {
     // Jarallax init
     $('.jarallax').jarallax({
-        speed: 0.2,
-        disableParallax: /iPad|iPhone|iPod|Android/,
+        speed: 0.6,
+        //disableParallax: /iPad|iPhone|iPod|Android/,
     });
 
     // Set carousel fade time
