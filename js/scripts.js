@@ -16,7 +16,7 @@ $('#hero-first-img').addClass('active');
 $(function () {
     // Jarallax init
     $('.jarallax').jarallax({
-        speed: 0.6,
+        speed: 0,
         //disableParallax: /iPad|iPhone|iPod|Android/,
     });
 

@@ -99,9 +99,6 @@
 
   let hovno = 0;
   function updateParallax() {
-    hovno = hovno == 0 ? 1 : 0;
-    document.getElementById('val-top').textContent = hovno;
-
     if (!jarallaxList.length) {
       return;
     }
