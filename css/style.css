@@ -1,4 +1,4 @@
-/* ---------- Adding fonts ---------- */
+/* ---------- Fonts ---------- */
 
 @font-face {
     font-family: open-sans;
@@ -24,6 +24,8 @@
     font-weight: 700;
 }
 
+/* Turning off overscroll-behavior */
 body {
     overscroll-behavior: none;
 }
+

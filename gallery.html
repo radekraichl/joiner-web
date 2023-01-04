@@ -6,13 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=7, initial-scale=1.0">
     <title>Document</title>
-    
-    <style>
 
+    <style>
+        .slide-top-fast {
+            animation: slide-top 0.8s ease-in-out both;
+        }
+
+        .slide-top-slow {
+            animation: slide-top 1s ease-in-out both;
+        }
+
+        @keyframes slide-top {
+            0% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <h1>hello</h1>
+
+    <div class="slide-top-fast">
+        <h1>slide-in text fast</h1>
+    </div>
+
+    <div class="slide-top-slow">
+        <h1>slide-in text slow</h1>
+    </div>
+
+
+
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean vel massa quis mauris vehicula lacinia. Duis condimentum augue id magna semper rutrum. Et harum quidem rerum facilis est et expedita distinctio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vestibulum fermentum tortor id mi. Nullam eget nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nullam faucibus mi quis velit. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus.
 
     Phasellus et lorem id felis nonummy placerat. Duis risus. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Et harum quidem rerum facilis est et expedita distinctio. Aenean id metus id velit ullamcorper pulvinar. Integer pellentesque quam vel velit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Maecenas lorem. Duis viverra diam non justo. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Etiam egestas wisi a erat. Integer tempor. Donec vitae arcu. Etiam dictum tincidunt diam.
