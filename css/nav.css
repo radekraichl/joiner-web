@@ -69,7 +69,7 @@
 }
 
 /* for low resolution displays */
-@media screen and (max-width: 326px) {   
+@media screen and (max-width: 326px) {
     .navbar-brand {
         margin-bottom: 5px;
     }
