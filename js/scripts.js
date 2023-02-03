@@ -50,12 +50,16 @@ $(function () {
     $('<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>').appendTo('head');
     $('<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>').appendTo('head');
 
-    // Create --vh property
-    createVH();
-
+    // If the device is mobile
     if (isMobile) {
-        $(window).on("resize", () => {
-            createVH();
+        var width = $(window).width();
+        $(window).resize(function () {
+            // Only action on screen width change
+            if ($(window).width() != width) {
+                // Create --vh property
+                createVH();
+                width = $(window).width();
+            }
         });
     }
 
