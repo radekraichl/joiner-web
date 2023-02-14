@@ -1,16 +1,22 @@
 /* ---------- Hero Section ---------- */
+.carousel {
+    background-color: #59483F;
+}
+
 .carousel-item img {
     filter: brightness(90%);
 }
 
 /* ---------- Jarallax images ---------- */
 .jarallax {
+    z-index: 0;
     position: relative;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
 }
 
 .jarallax > .jarallax-img {
+    z-index: -1;
     position: absolute;
     object-fit: cover;
     top: 0;
@@ -19,9 +25,9 @@
     height: 100%;
 }
 
-/* ---------- Init fade time ---------- */
+/* ---------- Default carousel fade time ---------- */
 .carousel-item {
-    transition: opacity 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .carousel-fade .active.carousel-item-start,
@@ -57,12 +63,24 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hero-text h1 {
+    .hero-foreground h1 {
         font-size: 34px;
     }
 
-    .hero-text h2 {
+    .hero-foreground h2 {
         font-size: 20px;
+    }
+}
+
+/* for mobile ladscape */
+@media screen and (max-height: 326px) {
+    .hero-foreground h1 {
+        padding-top: 40px;
+        font-size: 24px;
+    }
+
+    .hero-foreground h2 {
+        font-size: 16px;
     }
 }
 

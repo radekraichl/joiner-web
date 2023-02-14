@@ -1,3 +1,4 @@
+
 var userAgent = navigator.userAgent;
 
 // Mobile device detection
@@ -17,18 +18,19 @@ function createVH() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+// Function to set the fade time of the carousel
+function setCarouselFadeTime(time) {
+    console.log("volam setCarouselFadeTime parametr: " + time);
+    $(`<style> .carousel-item { transition: transform ${time}s ease-in-out } </style>`).appendTo('head');
+    $(`<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s ${time}s } </style>`).appendTo('head');
+    $(`<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s ${time}s } </style>`).appendTo('head');
+}
+
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
 
 // Document ready
 $(function () {
-    // Jarallax init
-    if (parseInt(getAndroidVersion()) > 10 || getAndroidVersion() === undefined) {
-        $('.jarallax').jarallax({
-            speed: 0.4,
-        });
-    }
-
     // Lightgallery init
     lightGallery($('#light-gallery').get(0), {
         plugins: [lgThumbnail, lgFullscreen, lgZoom],
@@ -45,13 +47,9 @@ $(function () {
         scale: 1,
     });
 
-    // Set carousel fade time
-    $('<style> .carousel-item { transition: opacity 3s ease-in-out } </style>').appendTo('head');
-    $('<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s 3s } </style>').appendTo('head');
-    $('<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s 3s } </style>').appendTo('head');
-
     // If the device is mobile
     if (isMobile) {
+        createVH();
         var width = $(window).width();
         $(window).resize(function () {
             // Only action on screen width change
@@ -62,6 +60,12 @@ $(function () {
             }
         });
     }
+    else {
+        $(window).resize(function () {
+            // Create --vh property
+            createVH();
+        });
+    }
 
     // Fade in adn fade out scroll indicator on scroll 
     $(window).scroll(function () {
@@ -70,4 +74,25 @@ $(function () {
         else
             $('.scroll-indicator').css('opacity', 1);
     });
+
+    // Jarallax init
+    if (parseInt(getAndroidVersion()) > 10 || getAndroidVersion() === undefined) {
+        $('.jarallax').jarallax({
+            speed: 0.4,
+        });
+    }
+
+    // Setting the fading time after loading the DOM
+    setCarouselFadeTime(3);
+});
+
+// Restart carousel fade time after focus
+$(window).focus(function () {
+    var timeBadge = new Date().toTimeString().split(' ')[0];
+    console.log(timeBadge + " focus");
+    setCarouselFadeTime(0);
+
+    setTimeout(function () {
+        setCarouselFadeTime(3)
+    }, 500);
 });

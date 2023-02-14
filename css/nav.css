@@ -88,17 +88,13 @@
     .navbar {
         padding: 0;
     }
-
+    
     .navbar-brand {
-        margin-bottom: 5px;
+        font-size: 20px;
     }
-
-    .navbar-brand {
-        font-size: 24px;
-    }
-
+    
     .navbar-brand img {
-        height: 28px;
+        height: 22px;
     }
 }
 
