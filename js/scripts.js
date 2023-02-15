@@ -25,15 +25,6 @@ function setCarouselFadeTime(time) {
     $(`<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s ${time}s } </style>`).appendTo('head');
 }
 
-// Restart carousel fade time after focus
-$(window).focus(function () {
-    setCarouselFadeTime(0);
-
-    setTimeout(function () {
-        setCarouselFadeTime(3)
-    }, 500);
-});
-
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
 
@@ -112,5 +103,5 @@ $(function () {
     }
 
     // Setting the fading time after loading the DOM
-    setCarouselFadeTime(3);
+    setCarouselFadeTime(2.5);
 });
