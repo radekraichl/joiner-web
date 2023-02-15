@@ -41,8 +41,8 @@ $('#hero-first-img').addClass('active');
 
 // Opening
 $('#navbarNavAltMarkup').on('show.bs.collapse', function () {
-    $('nav').addClass('nav-blur');
-    $('nav').removeClass('nav-noblur');
+    $('nav').addClass('nav-color-dark');
+    $('nav').removeClass('nav-color');
 })
 
 // Open
@@ -53,8 +53,8 @@ $('#navbarNavAltMarkup').on('hide.bs.collapse', function () {})
 
 // Close
 $('#navbarNavAltMarkup').on('hidden.bs.collapse', function () {
-    $('nav').addClass('nav-noblur');
-    $('nav').removeClass('nav-blur');
+    $('nav').addClass('nav-color');
+    $('nav').removeClass('nav-color-dark');
 })
 
 // ---------- Document ready ----------
