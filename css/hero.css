@@ -55,11 +55,11 @@
 
 /* ---------- Hero foreground ---------- */
 .hero-foreground {
+    color: #F0F0F0;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     font-family: open-sans;
-    color: #F0F0F0;
 }
 
 @media screen and (max-width: 768px) {

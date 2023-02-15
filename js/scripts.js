@@ -20,16 +20,45 @@ function createVH() {
 
 // Function to set the fade time of the carousel
 function setCarouselFadeTime(time) {
-    console.log("volam setCarouselFadeTime parametr: " + time);
     $(`<style> .carousel-item { transition: transform ${time}s ease-in-out } </style>`).appendTo('head');
     $(`<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s ${time}s } </style>`).appendTo('head');
     $(`<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s ${time}s } </style>`).appendTo('head');
 }
 
+// Restart carousel fade time after focus
+$(window).focus(function () {
+    setCarouselFadeTime(0);
+
+    setTimeout(function () {
+        setCarouselFadeTime(3)
+    }, 500);
+});
+
 // Fix flickering intro image
 $('#hero-first-img').addClass('active');
 
-// Document ready
+// ---------- Navbar menu events ----------
+
+// Opening
+$('#navbarNavAltMarkup').on('show.bs.collapse', function () {
+    $('nav').addClass('nav-blur');
+    $('nav').removeClass('nav-noblur');
+})
+
+// Open
+$('#navbarNavAltMarkup').on('shown.bs.collapse', function () {})
+
+// Closing
+$('#navbarNavAltMarkup').on('hide.bs.collapse', function () {})
+
+// Close
+$('#navbarNavAltMarkup').on('hidden.bs.collapse', function () {
+    $('nav').addClass('nav-noblur');
+    $('nav').removeClass('nav-blur');
+})
+
+// ---------- Document ready ----------
+
 $(function () {
     // Lightgallery init
     lightGallery($('#light-gallery').get(0), {
@@ -84,15 +113,4 @@ $(function () {
 
     // Setting the fading time after loading the DOM
     setCarouselFadeTime(3);
-});
-
-// Restart carousel fade time after focus
-$(window).focus(function () {
-    var timeBadge = new Date().toTimeString().split(' ')[0];
-    console.log(timeBadge + " focus");
-    setCarouselFadeTime(0);
-
-    setTimeout(function () {
-        setCarouselFadeTime(3)
-    }, 500);
 });

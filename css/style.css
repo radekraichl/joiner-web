@@ -27,4 +27,5 @@
 /* Turning off overscroll-behavior */
 body {
     overscroll-behavior: none;
+    background-color: #B9B0A2;
 }
