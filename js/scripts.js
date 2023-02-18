@@ -18,18 +18,7 @@ function createVH() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-// Function to set the fade time of the carousel
-function setCarouselFadeTime(time) {
-    $(`<style> .carousel-item { transition: transform ${time}s ease-in-out } </style>`).appendTo('head');
-    $(`<style> .carousel-fade .active.carousel-item-end { transition: opacity 0s ${time}s } </style>`).appendTo('head');
-    $(`<style> .carousel-fade .active.carousel-item-start { transition: opacity 0s ${time}s } </style>`).appendTo('head');
-}
-
-// Fix flickering intro image
-$('#hero-first-img').addClass('active');
-
 // ---------- Navbar menu events ----------
-
 // Opening
 $('#navbarNavAltMarkup').on('show.bs.collapse', function () {
     $('nav').addClass('nav-color-dark');
@@ -49,7 +38,6 @@ $('#navbarNavAltMarkup').on('hidden.bs.collapse', function () {
 })
 
 // ---------- Document ready ----------
-
 $(function () {
     // Lightgallery init
     lightGallery($('#light-gallery').get(0), {
@@ -89,7 +77,7 @@ $(function () {
 
     // Fade in adn fade out scroll indicator on scroll 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 10)
+        if ($(window).scrollTop() > 100)
             $('.scroll-indicator').css('opacity', 0);
         else
             $('.scroll-indicator').css('opacity', 1);
@@ -101,7 +89,4 @@ $(function () {
             speed: 0.4,
         });
     }
-
-    // Setting the fading time after loading the DOM
-    setCarouselFadeTime(2.5);
 });

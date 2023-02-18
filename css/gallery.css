@@ -10,7 +10,7 @@
     column-count: 3;
 }
 
-.masonry .mItem {
+.masonry .item {
     transition: 0.3s linear;
     transform: scale(100.1%);
     margin-bottom: 28px;
@@ -18,22 +18,21 @@
     overflow: hidden;
 }
 
-.masonry .mItem img {
+.masonry .item img {
     transition: 0.3s linear;
     transform: scale(100.1%);
     filter: brightness(1);
     vertical-align: middle;
     width: 100%;
-
 }
 
 /* item hover */
-.masonry .mItem:hover {
+.masonry .item:hover {
     transform: scale(99.6%);
 }
 
 /* image hover */
-.masonry .mItem img:hover {
+.masonry .item img:hover {
     transform: scale(104%);
     filter: brightness(1.14);
 }

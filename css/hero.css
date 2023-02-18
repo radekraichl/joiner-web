@@ -1,13 +1,6 @@
 /* ---------- Hero Section ---------- */
-.carousel {
-    background-color: #59483F;
-}
 
-.carousel-item img {
-    filter: brightness(90%);
-}
-
-/* ---------- Jarallax images ---------- */
+/* ---------- Jarallax ---------- */
 .jarallax {
     z-index: 0;
     position: relative;
@@ -27,12 +20,12 @@
 
 /* ---------- Default carousel fade time ---------- */
 .carousel-item {
-    transition: transform 0.4s ease-in-out;
+    transition: transform 3s ease-in-out;
 }
 
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
-    transition: opacity 0s 0.4s;
+    transition: opacity 0s 3s;
 }
 
 /* ---------- Fix for flickering carousel ---------- */
@@ -104,7 +97,7 @@
 /* ---------- Scroll down indicator ---------- */
 .scroll-indicator {
     animation: bounce 1.6s ease infinite;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
     background-size: contain;
     background-repeat: no-repeat;
     width: 70px;

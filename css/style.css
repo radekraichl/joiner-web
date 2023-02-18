@@ -24,8 +24,74 @@
     font-weight: 700;
 }
 
-/* Turning off overscroll-behavior */
+/* ---------- Body ---------- */
+
 body {
     overscroll-behavior: none;
-    background-color: #B9B0A2;
+    background-color: #59483F;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-size: 18px;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ---------- Main section ---------- */
+
+.main-section {
+    color: #3c352b;
+    background-color: #F0F0F0;
+    font-family: open-sans;
+}
+
+.main-section h2 {
+    font-weight: 800;
+}
+
+/* ---------- Services ---------- */
+
+.service-item {
+    margin: 0;
+    background-color: #DDD7CE;
+    height: 12em;
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+    position: relative;
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #3c352b, transparent);
+}
+
+
+
+.description {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.508);
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+
+.gal-ref {
+    position: relative;
 }
