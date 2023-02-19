@@ -48,3 +48,24 @@
         column-count: 1;
     }
 }
+
+
+/* ---------- Top space ---------- */
+
+.gallery-top-spacer {
+    height: 120px;
+}
+
+/* for low resolution displays */
+@media screen and (max-width: 576px) {
+    .gallery-top-spacer {
+        height: 100px;
+    }
+}
+
+/* for mobile ladscape */
+@media screen and (max-height: 326px) {
+    .gallery-top-spacer {
+        height: 70px;
+    }
+}
