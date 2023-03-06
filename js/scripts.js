@@ -26,16 +26,23 @@ $('#navbarNavAltMarkup').on('show.bs.collapse', function () {
 })
 
 // Open
-$('#navbarNavAltMarkup').on('shown.bs.collapse', function () {})
+$('#navbarNavAltMarkup').on('shown.bs.collapse', function () { })
 
 // Closing
-$('#navbarNavAltMarkup').on('hide.bs.collapse', function () {})
+$('#navbarNavAltMarkup').on('hide.bs.collapse', function () { })
 
 // Close
 $('#navbarNavAltMarkup').on('hidden.bs.collapse', function () {
     $('nav').addClass('nav-color');
     $('nav').removeClass('nav-color-dark');
 })
+
+// Jarallax init
+if (parseInt(getAndroidVersion()) > 10 || getAndroidVersion() === undefined) {
+    $('.jarallax').jarallax({
+        speed: 0.3,
+    });
+}
 
 // ---------- Document ready ----------
 $(function () {
@@ -53,6 +60,7 @@ $(function () {
         speed: 500,
         zoom: true,
         scale: 1,
+        mobileSettings: { controls: false, showCloseIcon: true, download: false, },
     });
 
     // If the device is mobile
@@ -82,11 +90,4 @@ $(function () {
         else
             $('.scroll-indicator').css('opacity', 1);
     });
-
-    // Jarallax init
-    if (parseInt(getAndroidVersion()) > 10 || getAndroidVersion() === undefined) {
-        $('.jarallax').jarallax({
-            speed: 0.4,
-        });
-    }
 });

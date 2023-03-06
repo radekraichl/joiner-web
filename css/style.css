@@ -53,18 +53,6 @@ body {
     font-family: open-sans;
 }
 
-.main-section h2 {
-    font-weight: 800;
-}
-
-/* ---------- Services ---------- */
-
-.service-item {
-    margin: 0;
-    background-color: #DDD7CE;
-    height: 12em;
-}
-
 /* ---------- Divider ---------- */
 
 .divider {
@@ -80,4 +68,31 @@ body {
     width: 90%;
     height: 1px;
     background-image: linear-gradient(to right, transparent, #3c352b, transparent);
+}
+
+
+
+
+
+
+
+/* ---------- Services ---------- */
+
+.service-item {
+    margin: 0;
+    background-color: #DDD7CE;
+    height: 3.8em;
+}
+
+
+.s2 {
+    list-style-type: circle;
+}
+
+
+
+.service-card {
+    background-color: #d1bc9c;
+    height: 14rem;
+    width: 14rem;
 }

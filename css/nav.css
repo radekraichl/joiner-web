@@ -10,8 +10,6 @@
 /* navbar font */
 .navbar {
     font-family: open-sans;
-    font-size: 18px;
-    font-weight: 400;
 }
 
 /* ---------- Colors ---------- */
@@ -52,7 +50,7 @@
 .navbar {
     position: absolute;
     width: 100%;
-    z-index: 3;
+    z-index: 100;
 }
 
 /* navbar collapse center text */
